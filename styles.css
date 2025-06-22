@@ -67,3 +67,20 @@ footer {
   font-size: 0.9rem;
 }
 
+.etsy-button {
+  display: inline-block;
+  background-color: #8fac6a; /* your green */
+  color: white;
+  padding: 12px 25px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.etsy-button:hover {
+  background-color: #602e17; /* dark brown */
+}
+
