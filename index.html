@@ -3,18 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terra Elementa</title>
+  <title>Terra Elementa - Handmade Jewelry & Crochet</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Terra Elementa</h1>
-  <p>Handcrafted artisan products sourced from India — unique, sustainable, and elegant. Explore our curated collection of jewelry and stationery.</p>
-  <a class="button" href="https://www.etsy.com/shop/terraelementa" target="_blank" rel="noopener noreferrer">Shop on Etsy</a>
+
+  <header>
+    <h1>Terra Elementa</h1>
+    <p>Handmade Jewelry & Crochet | Launching Soon</p>
+  </header>
+
+  <main>
+    <section id="coming-soon">
+      <h2>Coming Soon</h2>
+      <p>Our Valentine’s Day collection will be live shortly. Stay tuned for elegant, handcrafted pieces inspired by nature.</p>
+    </section>
+
+    <section id="subscribe">
+      <h2>Subscribe for Updates</h2>
+      <p>Get notified about our launch and exclusive offers.</p>
+      <form id="subscribe-form">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscribe-message" style="color: green; display: none;">Thank you for subscribing!</p>
+    </section>
+
+    <section id="about-us">
+      <h2>About Us</h2>
+      <p>Terra Elementa celebrates nature, craftsmanship, and sustainability. Each piece is handmade with love, blending timeless elegance with eco-conscious materials.</p>
+    </section>
+
+    <section id="contact-us">
+      <h2>Contact Us</h2>
+      <p>Have questions or want to collaborate? Reach out to us:</p>
+      <ul>
+        <li>Email: <a href="mailto:hello@terraelementa.co.uk">hello@terraelementa.co.uk</a></li>
+        <li>Instagram: <a href="https://instagram.com/terraelementa" target="_blank">@terraelementa</a></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    Follow us on
-    <a href="https://www.instagram.com/terraelementa" target="_blank" rel="noopener noreferrer">Instagram</a> &amp; 
-    <a href="https://www.tiktok.com/@terraelementa" target="_blank" rel="noopener noreferrer">TikTok</a>
+    &copy; 2025 Terra Elementa. All rights reserved.
   </footer>
+
+  <script>
+    // Simple subscription form handler (no backend, just demo)
+    const form = document.getElementById('subscribe-form');
+    const message = document.getElementById('subscribe-message');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      message.style.display = 'block';
+      form.reset();
+    });
+  </script>
+
 </body>
 </html>
