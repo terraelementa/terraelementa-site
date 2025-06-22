@@ -1,48 +1,69 @@
+/* styles.css */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0; 
+  background-color: #f4d4b7; /* Soft Peach background */
+  color: #2b1b10; /* Dark Chocolate text */
+  margin: 0;
   padding: 0;
-  background: #faf9f6;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
+}
+
+header {
+  background-color: #602e17; /* Deep Brown */
+  color: white;
+  padding: 1rem 2rem;
   text-align: center;
-  padding: 20px;
 }
 
 h1 {
-  font-size: 3rem;
-  margin-bottom: 0.2em;
-  color: #2c3e50;
+  margin: 0;
+  font-weight: 700;
 }
 
-p {
-  max-width: 500px;
-  font-size: 1.2rem;
-  margin-bottom: 1.5em;
-  line-height: 1.5;
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(43, 27, 16, 0.1);
 }
 
-a.button {
-  display: inline-block;
-  background-color: #6c63ff;
-  color: white;
-  padding: 0.8em 2em;
+section {
+  margin-bottom: 2rem;
+}
+
+a {
+  color: #8fac6a; /* Muted Olive Green */
   text-decoration: none;
   font-weight: 600;
-  border-radius: 6px;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #602e17; /* Deep Brown */
+}
+
+button {
+  background-color: #8fac6a; /* Muted Olive Green */
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
-a.button:hover {
-  background-color: #5750d6;
+button:hover {
+  background-color: #602e17; /* Deep Brown */
 }
 
 footer {
-  margin-top: 3em;
+  background-color: #2b1b10; /* Dark Chocolate */
+  color: #f4d4b7; /* Soft Peach */
+  text-align: center;
+  padding: 1rem 0;
   font-size: 0.9rem;
-  color: #666;
 }
+
