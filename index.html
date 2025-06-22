@@ -3,51 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terra Elementa - Handmade Jewellery & Crochet</title>
+  <title>Terra Elementa - Handmade Jewelry & Crochet</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <header class="hero-section">
-    <div class="container">
-      <h1>Terra Elementa</h1>
-      <p class="tagline">Handmade Jewellery & Crochet | Launching Soon</p>
-      <a href="https://www.etsy.com/shop/terraelementa" target="_blank" class="btn btn-primary">Shop on Etsy</a>
-    </div>
+  <header class="section section-dark">
+    <h1>Terra Elementa</h1>
+    <p>Handmade Jewellery & Crochet | Launching Soon</p>
   </header>
 
   <main>
+
     <section id="coming-soon" class="section section-light">
-      <div class="container">
-        <h2>Coming Soon</h2>
-        <p>Our first collection will be live shortly. Stay tuned for elegant, handcrafted pieces sourced ethically and created with love.</p>
-      </div>
+      <h2>Coming Soon</h2>
+      <p>Our first collection will be live shortly. Stay tuned for elegant, handcrafted pieces sourced ethically and created with love.</p>
     </section>
 
-    <section id="subscribe" class="section section-accent">
-      <div class="container">
-        <h2>Subscribe for Updates</h2>
-        <p>Get notified about our launch and exclusive offers.</p>
-        <form id="subscribe-form" class="subscribe-form">
-          <input type="email" placeholder="Enter your email" required />
-          <button type="submit" class="btn btn-secondary">Subscribe</button>
-        </form>
-        <p id="subscribe-message" class="subscribe-message">Thank you for subscribing!</p>
-      </div>
+    <section class="section section-accent">
+      <a href="https://www.etsy.com/shop/terraelementa" target="_blank" class="etsy-button">Shop on Etsy</a>
+    </section>
+
+    <section id="subscribe" class="section section-light">
+      <h2>Subscribe for Updates</h2>
+      <p>Get notified about our launch and exclusive offers.</p>
+      <form id="subscribe-form" class="subscribe-form">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscribe-message" style="color: #4caf50; display: none; margin-top: 1rem;">Thank you for subscribing!</p>
     </section>
 
     <section id="about-us" class="section section-light">
-      <div class="container">
-        <h2>About Us</h2>
-        <p>Terra Elementa celebrates nature, craftsmanship, and sustainability. Each piece is handmade with love, blending timeless elegance with eco-conscious materials.</p>
-      </div>
+      <h2>About Us</h2>
+      <p>Terra Elementa celebrates nature, craftsmanship, and sustainability. Each piece is handmade with love, blending timeless elegance with eco-conscious materials.</p>
     </section>
 
     <section id="contact-us" class="section section-dark">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to collaborate? Reach out to us:</p>
-        <ul>
-          <li>Email: <a href="mailto:hello@terraelementa.co.uk">hello@terraelementa.co.uk</a></li>
-          <li>Instagra
+      <h2>Contact Us</h2>
+      <p>Have questions or want to collaborate? Reach out to us:</p>
+      <ul>
+        <li>Email: <a href="mailto:hello@terraelementa.co.uk">hello@terraelementa.co.uk</a></li>
+        <li>Instagram: <a href="https://instagram.com/terraelementa" target="_blank">@terraelementa</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="section section-dark">
+    &copy; 2025 Terra Elementa. All rights reserved.
+  </footer>
+
+  <script>
+    // Simple subscription form handler (no backend, just demo)
+    const form = document.getElementById('subscribe-form');
+    const message = document.getElementById('subscribe-message');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      message.style.display = 'block';
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
