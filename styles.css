@@ -22,11 +22,48 @@ h2 {
   font-size: 2rem;
 }
 
+/* Remove .container max-width and margin centering */
+
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 4vw;  /* horizontal padding relative to viewport */
+  max-width: none;    /* remove width constraints */
+  margin: 0;          /* no centering margin */
+  box-sizing: border-box;
 }
+
+/* Left-align text in sections except hero */
+.section, .section-light, .section-accent, .section-dark {
+  text-align: left;
+}
+
+/* Optional: keep hero heading centered */
+.hero-section {
+  text-align: center;
+}
+
+/* Adjust subscribe form so it stretches naturally */
+.subscribe-form {
+  max-width: 600px;  /* limit width so input isn't huge on wide screens */
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+/* Ensure input and button scale nicely */
+.subscribe-form input[type="email"] {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+}
+
+.subscribe-form button {
+  border-radius: 25px;
+  font-size: 1rem;
+  padding: 0 1.5rem;
+}
+
 
 /* Hero Section */
 .hero-section {
