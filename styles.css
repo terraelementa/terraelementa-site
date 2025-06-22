@@ -1,197 +1,167 @@
-/* Fonts */
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: #2b1b10;
-  background: #fff;
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  color: #2b1b10; /* dark brown */
+  background-color: #f4d4b7; /* light cream */
 }
 
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-  color: #602e17;
-  margin-bottom: 0.5rem;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-/* Remove .container max-width and margin centering */
-
-.container {
-  padding: 2rem 4vw;  /* horizontal padding relative to viewport */
-  max-width: none;    /* remove width constraints */
-  margin: 0;          /* no centering margin */
-  box-sizing: border-box;
-}
-
-/* Left-align text in sections except hero */
-.section, .section-light, .section-accent, .section-dark {
-  text-align: left;
-}
-
-/* Optional: keep hero heading centered */
-.hero-section {
-  text-align: center;
-}
-
-/* Adjust subscribe form so it stretches naturally */
-.subscribe-form {
-  max-width: 600px;  /* limit width so input isn't huge on wide screens */
-  display: flex;
-  gap: 1rem;
-  padding: 0;
-}
-
-/* Ensure input and button scale nicely */
-.subscribe-form input[type="email"] {
-  flex-grow: 1;
-  padding: 0.75rem 1rem;
-  border-radius: 25px;
-  border: none;
-  font-size: 1rem;
-}
-
-.subscribe-form button {
-  border-radius: 25px;
-  font-size: 1rem;
-  padding: 0 1.5rem;
-}
-
-
-/* Hero Section */
-.hero-section {
-  background: #f4d4b7;
-  text-align: center;
-  padding: 4rem 1rem;
-  color: #2b1b10;
-}
-
-.tagline {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  font-weight: 500;
-  color: #602e17;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
+a {
+  color: #602e17; /* deep brown */
   text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-primary {
-  background-color: #8fac6a;
-  color: white;
-  border: none;
-  box-shadow: 0 4px 6px rgba(143,172,106,0.4);
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #7a9a59;
-  box-shadow: 0 6px 12px rgba(122,154,89,0.6);
-}
-
-.btn-secondary {
-  background-color: #602e17;
-  color: #f4d4b7;
-  border: none;
-  box-shadow: 0 4px 6px rgba(96,46,23,0.4);
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus {
-  background-color: #4b2414;
-  box-shadow: 0 6px 12px rgba(75,36,20,0.6);
-}
-
-/* Sections */
-.section {
-  padding: 4rem 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.section-light {
-  background: #fff;
-  color: #2b1b10;
-}
-
-.section-accent {
-  background: #8fac6a;
-  color: #fff;
-  text-align: center;
-}
-
-.section-dark {
-  background: #2b1b10;
-  color: #f4d4b7;
-}
-
-.section-accent p,
-.section-accent h2 {
-  color: #f4d4b7;
-}
-
-.section-dark a {
-  color: #f4d4b7;
+a:hover {
   text-decoration: underline;
 }
 
-.section-dark a:hover {
-  color: #8fac6a;
+/* Container for fixed max width and horizontal padding */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
 }
 
-/* Subscribe Form */
+/* Section base styles */
+.section {
+  padding: 3rem 0;
+  width: 100%;
+}
+
+/* Background variants */
+.section-light {
+  background-color: #f4d4b7; /* light cream */
+  color: #2b1b10;
+}
+
+.section-dark {
+  background-color: #2b1b10; /* dark brown */
+  color: #f4d4b7;
+}
+
+.section-accent {
+  background-color: #8fac6a; /* muted green */
+  color: white;
+  text-align: center;
+}
+
+/* Header */
+header h1 {
+  margin: 0;
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+/* Headings */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Etsy button */
+.etsy-button {
+  display: inline-block;
+  background-color: #602e17; /* deep brown */
+  color: #f4d4b7; /* cream */
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.etsy-button:hover,
+.etsy-button:focus {
+  background-color: #8fac6a; /* muted green */
+  color: #2b1b10;
+  outline: none;
+}
+
+/* Subscribe form */
 .subscribe-form {
-  margin-top: 1.5rem;
   display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  max-width: 450px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 400px;
+  margin-top: 1rem;
 }
 
 .subscribe-form input[type="email"] {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  border-radius: 25px;
-  border: none;
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
+  border: 2px solid #8fac6a;
+  border-right: none;
+  border-radius: 30px 0 0 30px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.subscribe-form input[type="email"]:focus {
+  border-color: #602e17;
 }
 
 .subscribe-form button {
-  border-radius: 25px;
+  background-color: #602e17;
   border: none;
-  font-size: 1rem;
+  color: #f4d4b7;
+  padding: 0 1.5rem;
+  font-weight: 600;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-#subscribe-message {
-  margin-top: 1rem;
-  text-align: center;
-  font-weight: 600;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+.subscribe-form button:hover,
+.subscribe-form button:focus {
+  background-color: #8fac6a;
+  color: #2b1b10;
+  outline: none;
+}
+
+/* Contact links */
+#contact-us ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#contact-us li {
+  margin-bottom: 0.5rem;
 }
 
 /* Footer */
-.footer {
-  background: #602e17;
-  color: #f4d4b7;
+footer {
   text-align: center;
-  padding: 1rem 0;
   font-size: 0.9rem;
+  padding: 1rem 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .subscribe-form {
+    flex-direction: column;
+  }
+  .subscribe-form input[type="email"],
+  .subscribe-form button {
+    width: 100%;
+    border-radius: 30px;
+    border-right: 2px solid #8fac6a;
+    margin-bottom: 0.5rem;
+  }
+  .subscribe-form button {
+    border-radius: 30px;
+  }
 }
