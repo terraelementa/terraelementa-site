@@ -1,149 +1,160 @@
-/* styles.css */
-
+/* Fonts */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4d4b7; /* Soft Peach background */
-  color: #2b1b10; /* Dark Chocolate text */
+  font-family: 'Montserrat', sans-serif;
+  color: #2b1b10;
+  background: #fff;
   margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
 
-header {
-  background-color: #602e17; /* Deep Brown */
-  color: white;
-  padding: 1rem 2rem;
-  text-align: center;
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #602e17;
+  margin-bottom: 0.5rem;
 }
 
 h1 {
-  margin: 0;
+  font-size: 3rem;
   font-weight: 700;
 }
 
-main {
-  padding: 2rem;
+h2 {
+  font-size: 2rem;
+}
+
+.container {
   max-width: 900px;
-  margin: auto;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(43, 27, 16, 0.1);
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-section {
+/* Hero Section */
+.hero-section {
+  background: #f4d4b7;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #2b1b10;
+}
+
+.tagline {
+  font-size: 1.25rem;
   margin-bottom: 2rem;
+  font-weight: 500;
+  color: #602e17;
 }
 
-a {
-  color: #8fac6a; /* Muted Olive Green */
-  text-decoration: none;
+/* Buttons */
+.btn {
+  display: inline-block;
   font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-a:hover {
-  text-decoration: underline;
-  color: #602e17; /* Deep Brown */
-}
-
-button {
-  background-color: #8fac6a; /* Muted Olive Green */
+.btn-primary {
+  background-color: #8fac6a;
   color: white;
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(143,172,106,0.4);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #7a9a59;
+  box-shadow: 0 6px 12px rgba(122,154,89,0.6);
+}
+
+.btn-secondary {
+  background-color: #602e17;
+  color: #f4d4b7;
+  border: none;
+  box-shadow: 0 4px 6px rgba(96,46,23,0.4);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #4b2414;
+  box-shadow: 0 6px 12px rgba(75,36,20,0.6);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section-light {
+  background: #fff;
+  color: #2b1b10;
+}
+
+.section-accent {
+  background: #8fac6a;
+  color: #fff;
+  text-align: center;
+}
+
+.section-dark {
+  background: #2b1b10;
+  color: #f4d4b7;
+}
+
+.section-accent p,
+.section-accent h2 {
+  color: #f4d4b7;
+}
+
+.section-dark a {
+  color: #f4d4b7;
+  text-decoration: underline;
+}
+
+.section-dark a:hover {
+  color: #8fac6a;
+}
+
+/* Subscribe Form */
+.subscribe-form {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subscribe-form input[type="email"] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+}
+
+.subscribe-form button {
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+}
+
+#subscribe-message {
+  margin-top: 1rem;
+  text-align: center;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-button:hover {
-  background-color: #602e17; /* Deep Brown */
-}
-
-footer {
-  background-color: #2b1b10; /* Dark Chocolate */
-  color: #f4d4b7; /* Soft Peach */
+/* Footer */
+.footer {
+  background: #602e17;
+  color: #f4d4b7;
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
 }
-
-.etsy-button {
-  display: inline-block;
-  background-color: #8fac6a;  /* green tone from your palette */
-  color: white;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(143,172,106, 0.4);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  margin: 1rem auto 3rem auto;
-  cursor: pointer;
-}
-
-.etsy-button:hover,
-.etsy-button:focus {
-  background-color: #7ba15b; /* slightly darker green */
-  box-shadow: 0 6px 12px rgba(123,161,91, 0.6);
-  outline: none;
-}
-
-
-/* Section background colors and text adjustments */
-
-.section-lightgreen {
-  background-color: #e4f0d8;  /* lighter version of #8fac6a */
-  color: #2b1b10;
-}
-
-.section-beige {
-  background-color: #f9efe2;  /* lighter version of #f4d4b7 */
-  color: #2b1b10;
-}
-
-.section-lightbrown {
-  background-color: #f0e4d9;  /* softer light brown */
-  color: #2b1b10;
-}
-
-.section-darkbrown {
-  background-color: #602e17;
-  color: #f4d4b7;
-}
-
-.section-darkbrown a {
-  color: #f4d4b7;
-}
-
-.section-darkbrown a:hover,
-.section-darkbrown a:focus {
-  color: #8fac6a;
-}
-
-/* Adjust shadows on colored backgrounds */
-
-section.section-lightgreen,
-section.section-beige,
-section.section-lightbrown,
-section.section-darkbrown {
-  box-shadow: none;
-}
-
-/* Keep spacing and border radius for sections */
-section {
-  border-radius: 12px;
-  padding: 2rem 2rem;
-  margin-bottom: 2rem;
-}
-
-/* For the darkbrown section, lighten the ul list */
-.section-darkbrown ul li {
-  margin-bottom: 0.6rem;
-  font-weight: 600;
-}
-
-
-
-
